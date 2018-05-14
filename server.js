@@ -18,3 +18,10 @@ app.get("/", (req, res) => {
 server.listen(8080, () => {
     console.log("Listening on port 8080!");
 });
+
+io.on("connection", socket => {
+});
+
+setInterval(() => {
+    io.sockets.emit("message", "hi!");
+}, 1000);
